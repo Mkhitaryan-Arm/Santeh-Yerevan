@@ -1,0 +1,203 @@
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<img src="./Screenshot 2025-12-24 231554.png" alt="">
+<title>Master +</title>
+<meta charset="UTF-8">
+<a href="https://www.example.com/page">Перейти на сайт</a>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:16px;}
+.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+.w3-half img:hover{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+  <div class="w3-container">
+    <h3 class="w3-padding-64"><b>Master +</b></h3>
+  </div>
+  <div class="w3-bar-block">
+    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
+    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Our Works</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Services</a> 
+    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Workers</a> 
+    <a href="#packages" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Prices</a> 
+    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">&#9776;</a>
+  <span>Company Name</span>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+  <!-- Header -->
+  <div class="w3-container" style="margin-top:80px" id="showcase">
+    <h1 class="w3-jumbo"><b>Building Services</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>our works.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+  </div>
+  
+  <!-- Photo grid (modal) -->
+  <div class="w3-row-padding">
+    <div class="w3-half">
+      <img src="https://специалисты.рф/storage/2024/12/17/5xedvFifC8CCxDVDH3tTknVmwsldVgI5SfWRZy4k.jpg" style="width:100%" onclick="onClick(this)" alt="">
+      <img src="https://idetremont.ru/upload/medialibrary/eb0/eb08fc42b0a5e7bd32a09cee87f4d710.jpg" style="width:100%" onclick="onClick(this)" alt="починить кран">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnHJqwl5YfB8tlWFXH8seUm7onTMQK1jSb5g&s" style="width:100%" onclick="onClick(this)" alt="ремонт ванной комнаты">
+    </div>
+
+    <div class="w3-half">
+      <img src="https://kanalizacii-krasnodar.ru/images/img/prochistka-unitaza-krasnodar.jpg" style="width:100%" onclick="onClick(this)" alt="открытие засора">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkl1PEahSfgapqVTuVxyEpqfBs5GqOA5XzBg&s" style="width:100%" onclick="onClick(this)" alt="укладка плитки">
+      <img src="https://remo36.ru/images/uslugi/pomesh/top-tualet.jpg" style="width:100%" onclick="onClick(this)" alt="ремонт туалета ">
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">&times;</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <div class="w3-container" id="services" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Services.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>We are a company providing a full range of renovation, plumbing, and tile installation services. Our goal is to create a comfortable, reliable, and beautiful space in your home that fully meets your expectations.</p>
+    <p>We carry out both cosmetic and major renovations of apartments and houses, including wall and floor leveling, puttying, painting, wallpapering, drywall installation, and replacement of flooring. We also professionally handle plumbing work—installing and replacing pipes, faucets, toilets, bathtubs, and shower cabins. In addition, we offer high-quality installation of tiles, porcelain stoneware, and mosaics in bathrooms, kitchens, and other areas.
+We work with trusted materials, follow proper technologies and deadlines, and pay close attention to details and our clients’ wishes. For us, it is important that the renovation result is not only aesthetically pleasing but also durable, making your home comfortable and cozy for everyday living.
+    </p>
+  </div>
+  
+  <!-- Designers -->
+  <div class="w3-container" id="designers" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Workers.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Our workers are thoughtfully chosen.</p>
+    <p>
+    </p>
+    <p><b>Our workers are thoughtfully chosen</b>:</p>
+  </div>
+
+  <!-- The Team -->
+  <div class="w3-row-padding w3-grayscale"  >
+    <div class="w3-col m4 w3-margin-bottom" >
+      <div class="color-light-grey">
+        <div class="w3-container">
+          <h3>Artak Mkhitaryan</h3>
+          <p class="w3-opacity">Founder</p>
+          <p> Our worker</p>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="w3-col m4 w3-margin-bottom">
+      <div class="w3-light-grey">
+        <img src="/w3images/team1.jpg" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Jane Doe</h3>
+          <p class="w3-opacity">Designer</p>
+          <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+        </div>
+      </div>
+    </div> -->
+      <!-- <div class="w3-col m4 w3-margin-bottom">
+        <div class="w3-light-grey">
+          <img src="/w3images/team3.jpg" alt="Mike" style="width:100%">
+          <div class="w3-container">
+            <h3>Mike Ross</h3>
+            <p class="w3-opacity">Architect</p>
+            <p>Phasellus eget enim eu lectus faucibus vestibulum. Suspendisse sodales pellentesque elementum.</p>
+          </div>
+        </div>
+      </div> -->
+  </div>
+
+  <!-- Packages / Pricing Tables -->
+  <div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Prices .</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p></p>
+  </div>
+   <h3>consultation</h3>
+   <p>5000 AMD</p>
+
+    <h3>Bathroom renovation</h3>
+    <p>Contractual</p>
+      
+    <h3>Plumbing work</h3>
+    <p>Contractual</p>
+  
+    <h3>laying tiles</h3>
+    <p>Contractual</p>
+
+  <!-- Contact -->
+  <div class="w3-container" id="contact" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>"Looking for professional bathroom renovations and plumbing? Contact us."</p>
+    <form action="/action_page.php" target="_blank">
+      <div class="w3-section">
+        <h3>Name</h3>
+         <b>Artak</b>
+      </div>
+      <div class="w3-section">
+        <h3>Email</h3>
+          <b>a20-88@mail.ru</b>
+      </div>
+            <div class="w3-section">
+        <h3>Phone</h3>
+          <b>+374 77689191</b>
+      </div>
+      <div class="w3-section">
+      </div>
+    </form>  
+  </div>
+
+<!-- End page content -->
+</div>
+
+<!-- W3.CSS Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="display: flex; justify-content: center;" ><p class="w3-right">Powered by <a href="https://www.instagram.com/artur.mxitaryan.50767/" title="Mkhitaryan" target="_blank" class="w3-hover-opacity">Mkhitaryan</a></p></div>
+
+<script>
+// Script to open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>
