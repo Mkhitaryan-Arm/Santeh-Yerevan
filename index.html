@@ -4,12 +4,16 @@
 <title>Master +</title>
 <meta charset="UTF-8">
 <link rel="icon" href="favicon.png" type="image/png" style="border-radius: 50%;">
+<meta name="description" content="Профессиональный ремонт ванных комнат, сантехника и укладка плитки в Ереване. Качество и надежность.">
 <meta name="google-site-verification" content="eklq2qFwVDqYGOd32lodjoWfjtVsNRoRxSlp7tei_Ro" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <style>
   /* Добавить внутрь существующих тегов <style> */
+    html {
+  scroll-behavior: smooth;
+}
 .goog-te-gadget-simple {
     background-color: white !important;
     border: 1px solid #ccc !important;
@@ -26,6 +30,17 @@ body {font-size:16px;}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 
+.mySlides img {
+  height: 450px; /* Установите фиксированную высоту для всех фото в слайдере */
+  object-fit: cover; /* Это обрежет края фото, чтобы оно заполнило область без искажений */
+}
+
+/* Для мобильных телефонов высоту лучше уменьшить */
+@media (max-width: 600px) {
+  .mySlides img {
+    height: 250px;
+  }
+}
 /* Дополнительный стиль, чтобы переводчик выглядел аккуратно в меню */
 </style>
 </head>
@@ -52,33 +67,50 @@ body {font-size:16px;}
 
 <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
   <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">&#9776;</a>
-  <span>Company Name</span>
+  <span>Master +</span>
 </header>
 
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
+  
   <div class="w3-container" style="margin-top:80px" id="showcase">
     <h1 class="w3-jumbo"><b>Building Services</b></h1>
-    <h1 class="w3-xxxlarge w3-text-red"><b>our works.</b></h1>
+    <h1 class="w3-xxxlarge w3-text-red"><b>Our Works.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
   </div>
-  
-  <div class="w3-row-padding">
-    <div class="w3-half">
-      <img src="https://специалисты.рф/storage/2024/12/17/5xedvFifC8CCxDVDH3tTknVmwsldVgI5SfWRZy4k.jpg" style="width:100%" onclick="onClick(this)" alt="">
-      <img src="https://idetremont.ru/upload/medialibrary/eb0/eb08fc42b0a5e7bd32a09cee87f4d710.jpg" style="width:100%" onclick="onClick(this)" alt="починить кран">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRnHJqwl5YfB8tlWFXH8seUm7onTMQK1jSb5g&s" style="width:100%" onclick="onClick(this)" alt="ремонт ванной комнаты">
+
+  <div class="w3-container slider-container">
+    <div class="w3-display-container mySlides w3-animate-opacity">
+      <img src="https://специалисты.рф/storage/2024/12/17/5xedvFifC8CCxDVDH3tTknVmwsldVgI5SfWRZy4k.jpg" style="width:100%; border-radius:8px;">
+      <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black w3-opacity">
+        Капитальный ремонт ванной
+      </div>
     </div>
 
-    <div class="w3-half">
-      <img src="https://kanalizacii-krasnodar.ru/images/img/prochistka-unitaza-krasnodar.jpg" style="width:100%" onclick="onClick(this)" alt="открытие засора">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkl1PEahSfgapqVTuVxyEpqfBs5GqOA5XzBg&s" style="width:100%" onclick="onClick(this)" alt="укладка плитки">
-      <img src="https://remo36.ru/images/uslugi/pomesh/top-tualet.jpg" style="width:100%" onclick="onClick(this)" alt="ремонт туалета ">
+    <div class="w3-display-container mySlides w3-animate-opacity">
+      <img src="https://idetremont.ru/upload/medialibrary/eb0/eb08fc42b0a5e7bd32a09cee87f4d710.jpg" style="width:100%; border-radius:8px;">
+      <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black w3-opacity">
+        Установка сантехники
+      </div>
+    </div>
+
+    <div class="w3-display-container mySlides w3-animate-opacity">
+      <img src="https://remo36.ru/images/uslugi/pomesh/top-tualet.jpg" style="width:100%; border-radius:8px;">
+      <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black w3-opacity">
+        Укладка плитки (санузел)
+      </div>
+    </div>
+
+    <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+      <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+      <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+      <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
     </div>
   </div>
-
   <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
     <span class="w3-button w3-black w3-xxlarge w3-display-topright">&times;</span>
     <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
@@ -99,59 +131,232 @@ We work with trusted materials, follow proper technologies and deadlines, and pa
   <div class="w3-container" id="designers" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Workers.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    </p>
-    <p><b>Our workers are thoughtfully chosen</b>:</p>
+    <p>Наши мастера — это опытные специалисты, знающие свое дело до мельчайших деталей.</p>
   </div>
 
-  <div class="w3-row-padding w3-grayscale"  >
-    <div class="w3-col m4 w3-margin-bottom" >
-      <div class="color-light-grey">
-        <div class="w3-container">
+  <div class="w3-row-padding">
+    <div class="w3-col m6 l4 w3-margin-bottom">
+      <div class="w3-card-4">
+        <div class="w3-container w3-white">
           <h3>Artak Mkhitaryan</h3>
-          <p class="w3-opacity">Founder</p>
-          <p> Our worker</p>
+          <p class="w3-opacity">Founder & Lead Master</p>
+          <hr>
+          <p><i class="fa fa-star w3-text-amber"></i> <b>Специализация:</b> Ремонт под ключ, сантехника высокого уровня, укладка крупноформатной плитки.</p>
+          <p><i class="fa fa-briefcase w3-text-red"></i> <b>Опыт работы:</b> Более 10 лет в сфере строительства и ремонта.</p>
+          <p><i class="fa fa-check-square-o w3-text-green"></i> Гарантирует качество каждого этапа работ.</p>
+          
+          <p><a href="#contact" class="w3-button w3-light-grey w3-block w3-hover-red"><i class="fa fa-envelope"></i> Связаться с мастером</a></p>
         </div>
       </div>
     </div>
+
+    <div class="w3-col m6 l8">
+       <div class="w3-container">
+         <h3>Почему выбирают наших мастеров?</h3>
+         <ul class="w3-ul w3-border-0">
+           <li><i class="fa fa-check w3-text-red"></i> <b>Профессиональный инструмент:</b> Работаем только с качественным современным оборудованием.</li>
+           <li><i class="fa fa-check w3-text-red"></i> <b>Чистота на объекте:</b> Мы не оставляем после себя горы строительного мусора.</li>
+           <li><i class="fa fa-check w3-text-red"></i> <b>Честная смета:</b> Цена не вырастет в процессе работы "внезапно".</li>
+           <li><i class="fa fa-check w3-text-red"></i> <b>Пунктуальность:</b> Приходим вовремя, соблюдаем оговоренные сроки.</li>
+         </ul>
+       </div>
+    </div>
   </div>
 
-  <div class="w3-container" id="packages" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-red"><b>Prices .</b></h1>
+  <div class="w3-container w3-light-grey w3-padding-64" id="join-us">
+  <div class="w3-content" style="max-width:600px">
+    <h2 class="w3-text-red w3-center"><b>Хотите работать с нами?</b></h2>
+    <p class="w3-center">Отправьте свои данные, и мы добавим вас в нашу команду мастеров.</p>
+    
+    <form action="https://formspree.io/f/ВАШ_ID_ТУТ" method="POST" enctype="multipart/form-data">
+      <div class="w3-section">
+        <label>Ваше имя</label>
+        <input class="w3-input w3-border" type="text" name="name" required>
+      </div>
+      <div class="w3-section">
+        <label>Специализация (Плиточник, Сантехник и т.д.)</label>
+        <input class="w3-input w3-border" type="text" name="specialty" required>
+      </div>
+      <div class="w3-section">
+        <label>Опыт работы и примеры работ (ссылки)</label>
+        <textarea class="w3-input w3-border" name="message" rows="4"></textarea>
+      </div>
+      <button type="submit" class="w3-button w3-block w3-red w3-margin-bottom">Отправить анкету</button>
+    </form>
+  </div>
+</div>
+
+<div class="w3-container w3-padding-64 w3-light-grey" id="vacancies">
+  <div class="w3-content" style="max-width:800px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Вакансии.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p></p>
+    <p>Мы расширяем команду! Если вы профессиональный плиточник или сантехник в Ереване, заполните анкету ниже.</p>
+
+    <div class="w3-card-4 w3-white w3-padding-large w3-margin-top">
+      <form id="vacancyForm" action="https://script.google.com/macros/s/AKfycbwfDUi3XOtkifFOcYq_eDBtu-9ahZy6OoqEtI1Oo1I9OFmlIsveImvDwHo80yznbs_J9g/exec" method="POST">
+        <div class="w3-section">
+          <label><i class="fa fa-user"></i> Имя и Фамилия</label>
+          <input class="w3-input w3-border" type="text" name="name" placeholder="Армен Саргсян" required>
+        </div>
+        <div class="w3-section">
+          <label><i class="fa fa-wrench"></i> Ваша специализация</label>
+          <select class="w3-input w3-border" name="specialty">
+            <option value="Плиточник">Плиточник</option>
+            <option value="Сантехник">Сантехник</option>
+            <option value="Мастер под ключ">Мастер под ключ</option>
+            <option value="Другое">Другое</option>
+          </select>
+        </div>
+        <div class="w3-section">
+          <label><i class="fa fa-phone"></i> Контактный номер</label>
+          <input class="w3-input w3-border" type="text" name="phone" placeholder="+374..." required>
+        </div>
+        <div class="w3-section">
+          <label><i class="fa fa-commenting"></i> Опыт работы и ссылки на фото</label>
+          <textarea class="w3-input w3-border" name="message" rows="4" placeholder="Напишите немного о себе или дайте ссылку на Instagram/портфолио"></textarea>
+        </div>
+        <button type="submit" class="w3-button w3-block w3-red w3-padding-large">Отправить анкету</button>
+      </form>
+      <div id="successMessage" style="display:none;" class="w3-panel w3-green w3-padding-16 w3-margin-top">
+        Спасибо! Ваша анкета сохранена. Мы свяжемся с вами.
+      </div>
+    </div>
   </div>
-   <h3>consultation</h3>
-   <p>5000 AMD</p>
+</div>
 
-    <h3>Bathroom renovation</h3>
-    <p>Contractual</p>
-      
-    <h3>Plumbing work</h3>
-    <p>Contractual</p>
-  
-    <h3>laying tiles</h3>
-    <p>Contractual</p>
+<script>
+// Скрипт, чтобы страница не перезагружалась при отправке
+const form = document.getElementById('vacancyForm');
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const submitButton = form.querySelector('button');
+  submitButton.disabled = true;
+  submitButton.innerHTML = "Отправка...";
 
-  <div class="w3-container" id="contact" style="margin-top:75px">
+  fetch(form.action, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        form.style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+    })
+    .catch(error => {
+        alert('Ошибка! Попробуйте еще раз или напишите нам в WhatsApp.');
+        submitButton.disabled = false;
+        submitButton.innerHTML = "Отправка";
+    });
+});
+</script>
+
+<div class="w3-container" id="packages" style="margin-top:75px">
+    <h1 class="w3-xxxlarge w3-text-red"><b>Prices.</b></h1>
+    <hr style="width:50px;border:5px solid red" class="w3-round">
+    <p>Выберите нужную услугу или свяжитесь с нами для точного расчета.</p>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Consultation</li>
+        <li class="w3-padding-16">Выезд мастера</li>
+        <li class="w3-padding-16">Замеры объекта</li>
+        <li class="w3-padding-16">Составление сметы</li>
+        <li class="w3-padding-16">
+          <h2>5000 AMD</h2>
+          <span class="w3-opacity">фиксированная цена</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <a href="#contact" class="w3-button w3-white w3-padding-large w3-hover-black">Заказать</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-red w3-xlarge w3-padding-32">Renovation</li>
+        <li class="w3-padding-16">Ванная под ключ</li>
+        <li class="w3-padding-16">Сантехника и плитка</li>
+        <li class="w3-padding-16">Демонтаж и монтаж</li>
+        <li class="w3-padding-16">
+          <h2>Contractual</h2>
+          <span class="w3-opacity">зависит от сложности</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <a href="#contact" class="w3-button w3-red w3-padding-large w3-hover-black">Узнать цену</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-margin-top">
+    <div class="w3-half w3-margin-bottom">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Plumbing</li>
+        <li class="w3-padding-16">Замена труб</li>
+        <li class="w3-padding-16">Установка смесителей</li>
+        <li class="w3-padding-16">Устранение засоров</li>
+        <li class="w3-padding-16">
+          <h2>Contractual</h2>
+          <span class="w3-opacity">от объема работ</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <a href="#contact" class="w3-button w3-white w3-padding-large w3-hover-black">Вызвать мастера</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w3-half">
+      <ul class="w3-ul w3-light-grey w3-center">
+        <li class="w3-dark-grey w3-xlarge w3-padding-32">Tiling</li>
+        <li class="w3-padding-16">Укладка плитки</li>
+        <li class="w3-padding-16">Керамогранит</li>
+        <li class="w3-padding-16">Затирка швов</li>
+        <li class="w3-padding-16">
+          <h2>Contractual</h2>
+          <span class="w3-opacity">цена за м²</span>
+        </li>
+        <li class="w3-light-grey w3-padding-24">
+          <a href="#contact" class="w3-button w3-white w3-padding-large w3-hover-black">Рассчитать</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="w3-container" id="contact" style="margin-top:75px">
     <h1 class="w3-xxxlarge w3-text-red"><b>Contact.</b></h1>
     <hr style="width:50px;border:5px solid red" class="w3-round">
-    <p>"Looking for professional bathroom renovations and plumbing? Contact us."</p>
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <h3>Name</h3>
-          <b>Artak</b>
+    <p>Нужен качественный ремонт или консультация? Мы всегда на связи!</p>
+    
+    <div class="w3-row-padding w3-margin-top">
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-container w3-padding-24 w3-center w3-hover-light-grey" style="min-height:200px">
+          <div class="w3-text-red"><i class="fa fa-phone w3-xxlarge"></i></div>
+          <h3>Phone</h3>
+          <p>Позвоните нам напрямую:</p>
+          <a href="tel:+37477689191" class="w3-button w3-red w3-round-large"><b>+374 77 689191</b></a>
+        </div>
       </div>
-      <div class="w3-section">
-        <h3>Email</h3>
-          <b>a20-88@mail.ru</b>
+
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-container w3-padding-24 w3-center w3-hover-light-grey" style="min-height:200px">
+          <div class="w3-text-green"><i class="fa fa-whatsapp w3-xxlarge"></i></div>
+          <h3>WhatsApp</h3>
+          <p>Напишите нам в чат:</p>
+          <a href="https://wa.me/37477689191" class="w3-button w3-green w3-round-large"><b>Начать чат</b></a>
+        </div>
       </div>
-            <div class="w3-section">
-        <h3>Phone</h3>
-          <b>+374 77689191</b>
+
+      <div class="w3-third w3-margin-bottom">
+        <div class="w3-card w3-container w3-padding-24 w3-center w3-hover-light-grey" style="min-height:200px">
+          <div class="w3-text-blue"><i class="fa fa-envelope w3-xxlarge"></i></div>
+          <h3>Email</h3>
+          <p>Для предложений и смет:</p>
+          <a href="mailto:a20-88@mail.ru" class="w3-button w3-dark-grey w3-round-large"><b>a20-88@mail.ru</b></a>
+        </div>
       </div>
-      <div class="w3-section">
-      </div>
-    </form>  
+    </div>
+
+    <div class="w3-panel w3-leftbar w3-light-grey w3-padding-16 w3-margin-top">
+      <p><i>"Мы ценим ваше время, поэтому отвечаем на звонки и сообщения максимально быстро. Работаем по всему Еревану и пригородам."</i></p>
+      <p><strong>Master:</strong> Artak Mkhitaryan</p>
+    </div>
   </div>
 
 </div>
@@ -191,8 +396,73 @@ function onClick(element) {
     }
 </script>
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<a href="https://wa.me/37477689191" 
+   class="w3-button w3-green w3-circle" 
+   target="_blank" 
+   style="position:fixed; bottom:20px; right:20px; z-index:999; width:60px; height:60px; display:flex; align-items:center; justify-content:center; box-shadow: 2px 2px 10px rgba(0,0,0,0.3); text-decoration:none;">
+  <svg viewBox="0 0 448 512" width="30" height="30" fill="white">
+    <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.1-16.4-14.6-27.4-32.7-30.6-38.2-3.2-5.6-.3-8.6 2.4-11.3 2.5-2.5 5.5-6.5 8.3-9.7 2.8-3.3 3.7-5.6 5.6-9.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+  </svg>
+</a>
+
+<script>
+var slideIndex = 0;
+var timer; // Переменная для хранения таймера
+
+// Запускаем автоматическое переключение
+autoShowDivs();
+
+function plusDivs(n) {
+  clearTimeout(timer); // Останавливаем таймер, если пользователь нажал кнопку сам
+  showDivs(slideIndex += n);
+  autoShowDivs(); // Запускаем таймер заново
+}
+
+function currentDiv(n) {
+  clearTimeout(timer);
+  showDivs(slideIndex = n);
+  autoShowDivs();
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+
+// Новая функция для автоматического пролистывания
+function autoShowDivs() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}    
+  x[slideIndex-1].style.display = "block";  
+  
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  dots[slideIndex-1].className += " w3-white";
+  
+  // 4000 — это 4 секунды. Можно поменять на 3000 (3 сек) или 5000 (5 сек)
+  timer = setTimeout(autoShowDivs, 4000); 
+}
+</script>
 </body>
 </html>
-
 
 
